@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  MapPin, 
-  Filter, 
-  Phone, 
-  CheckCircle2, 
-  Building2, 
-  Layers, 
-  Sparkles, 
+import {
+  MapPin,
+  Filter,
+  Phone,
+  CheckCircle2,
+  Building2,
+  Layers,
+  Sparkles,
   Download,
   Plane,
   Hotel
@@ -19,19 +19,19 @@ export const ProjectsPage = ({ onOpenLeadModal }) => {
 
   const categories = ['All', 'Residential Plots', 'Residential & Commercial', 'Industrial Land'];
 
-  const filteredProjects = filter === 'All' 
-    ? projectsData 
+  const filteredProjects = filter === 'All'
+    ? projectsData
     : projectsData.filter(p => p.category === filter);
 
   return (
     <div className="bg-slate-50 min-h-screen pb-20 font-sans">
-      
+
       {/* ── Page Header ── */}
       <section className="relative py-20 bg-slate-950 text-white overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900 to-amber-950/40 opacity-90 z-10"></div>
-        <img 
-          src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1920&q=80" 
-          alt="Projects in Dholera" 
+        <img
+          src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1920&q=80"
+          alt="Projects in Dholera"
           className="absolute inset-0 w-full h-full object-cover opacity-30"
         />
         <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
@@ -42,7 +42,7 @@ export const ProjectsPage = ({ onOpenLeadModal }) => {
             Mangalam Aerovista Projects & Land Parcels
           </h1>
           <p className="text-slate-300 max-w-2xl mx-auto text-sm sm:text-base">
-            Explore our ready-for-registry residential plotting schemes, airport corridor projects, and industrial lands in Dholera Smart City SIR.
+            Explore our ready-for-registry residential plotting schemes, airport corridor projects, and industrial lands within the notified Dholera Smart City SIR (Special Investment Region), just 3.5 Km from Dholera International Airport.
           </p>
         </div>
       </section>
@@ -56,11 +56,10 @@ export const ProjectsPage = ({ onOpenLeadModal }) => {
               <button
                 key={cat}
                 onClick={() => setFilter(cat)}
-                className={`px-4 py-2 rounded text-xs sm:text-sm font-bold transition whitespace-nowrap cursor-pointer ${
-                  filter === cat
-                    ? 'bg-slate-900 text-[#f5a623] shadow-sm'
-                    : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-                }`}
+                className={`px-4 py-2 rounded text-xs sm:text-sm font-bold transition whitespace-nowrap cursor-pointer ${filter === cat
+                  ? 'bg-slate-900 text-[#f5a623] shadow-sm'
+                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                  }`}
               >
                 {cat}
               </button>
@@ -73,18 +72,45 @@ export const ProjectsPage = ({ onOpenLeadModal }) => {
         </div>
       </div>
 
+      {/* ── Plot Pricing Quick Reference ── */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
+            <div>
+              <p className="text-xs font-bold text-slate-500 uppercase">Residential Plot</p>
+              <p className="text-lg font-black text-slate-900" style={{ fontFamily: 'Outfit, sans-serif' }}>₹5,000 <span className="text-xs text-slate-500 font-bold">/ Sq. Yard</span></p>
+            </div>
+            <Building2 size={22} className="text-[#f5a623] shrink-0" />
+          </div>
+          <div className="bg-slate-900 text-white p-5 rounded-xl shadow-sm flex items-center justify-between">
+            <div>
+              <p className="text-xs font-bold text-slate-300 uppercase">Commercial + Residence</p>
+              <p className="text-lg font-black text-[#f5a623]" style={{ fontFamily: 'Outfit, sans-serif' }}>₹10,000 <span className="text-xs text-slate-300 font-bold">/ Sq. Yard</span></p>
+            </div>
+            <Layers size={22} className="text-[#f5a623] shrink-0" />
+          </div>
+          <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
+            <div>
+              <p className="text-xs font-bold text-slate-500 uppercase">2000 Sq. Yard SIR Plot</p>
+              <p className="text-lg font-black text-slate-900" style={{ fontFamily: 'Outfit, sans-serif' }}>₹20,000 <span className="text-xs text-slate-500 font-bold">/ Sq. Yard</span></p>
+            </div>
+            <Sparkles size={22} className="text-[#f5a623] shrink-0" />
+          </div>
+        </div>
+      </div>
+
       {/* ── Projects Grid ── */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((proj) => (
-            <div 
+            <div
               key={proj.id}
               className="group bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-2xl transition-all duration-300 flex flex-col justify-between"
             >
               {/* Image & Price Overlay */}
               <div className="relative h-60 overflow-hidden">
-                <img 
-                  src={proj.image} 
+                <img
+                  src={proj.image}
                   alt={proj.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
@@ -176,7 +202,7 @@ export const ProjectsPage = ({ onOpenLeadModal }) => {
               Looking for Custom Land Parcels or Commercial Deals?
             </h3>
             <p className="text-slate-400 text-sm max-w-xl">
-              We provide tailored land acquisition services for commercial plazas, hospitality, and large logistics companies in Navagam.
+              We provide tailored land acquisition services for commercial plazas, hospitality, and large logistics companies in Navagam, within the SIR zone — from ₹5,000/sqyd residential to ₹20,000/sqyd large-format SIR plots.
             </p>
           </div>
           <div className="flex flex-wrap gap-3">

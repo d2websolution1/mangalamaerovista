@@ -18,7 +18,7 @@ export const ProjectDetailPage = ({ onOpenLeadModal }) => {
 
   return (
     <div className="bg-slate-50 min-h-screen pb-20">
-      
+
       {/* ── Top Bar ── */}
       <div className="bg-slate-900 text-white py-4 border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -37,9 +37,9 @@ export const ProjectDetailPage = ({ onOpenLeadModal }) => {
 
       {/* ── Hero Banner ── */}
       <div className="relative h-96 lg:h-[480px] bg-slate-950 overflow-hidden">
-        <img 
-          src={project.image} 
-          alt={project.title} 
+        <img
+          src={project.image}
+          alt={project.title}
           className="w-full h-full object-cover opacity-75"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent flex flex-col justify-end">
@@ -64,10 +64,10 @@ export const ProjectDetailPage = ({ onOpenLeadModal }) => {
       {/* ── Main Detail Content ── */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-          
+
           {/* Left Column (8 cols) */}
           <div className="lg:col-span-8 space-y-8">
-            
+
             {/* Overview Box */}
             <div className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
               <h2 className="text-2xl font-black text-slate-900">Project Overview</h2>
@@ -75,7 +75,7 @@ export const ProjectDetailPage = ({ onOpenLeadModal }) => {
                 {project.description}
               </p>
               <p className="text-slate-600 text-sm leading-relaxed">
-                Positioned in the prime growth zone of Dholera Special Investment Region (SIR), {project.title} offers unparalleled capital appreciation backed by world-class urban infrastructure, 24/7 security, wide roads, and immediate registry permissions.
+                Positioned in the prime growth zone of Dholera Special Investment Region (SIR), just 3.5 Km from Dholera International Airport and 1.5 Km from Ajju Hotel, {project.title} offers unparalleled capital appreciation backed by world-class urban infrastructure, 24/7 security, wide roads, and immediate registry permissions.
               </p>
 
               {/* Highlights Pill Grid */}
@@ -131,7 +131,11 @@ export const ProjectDetailPage = ({ onOpenLeadModal }) => {
               <div className="space-y-3 text-xs sm:text-sm text-slate-700">
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-amber-500"></span>
-                  <span><strong>10-15 Mins:</strong> Upcoming Dholera International Airport (Twin Runways)</span>
+                  <span><strong>3.5 Km:</strong> Upcoming Dholera International Airport (Twin Runways)</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-amber-500"></span>
+                  <span><strong>1.5 Km:</strong> Ajju Hotel & Commercial Frontage</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-amber-500"></span>
@@ -145,6 +149,29 @@ export const ProjectDetailPage = ({ onOpenLeadModal }) => {
                   <span className="w-2 h-2 rounded-full bg-amber-500"></span>
                   <span><strong>12 Mins:</strong> Tata Semiconductor Fabrication Mega Plant (₹91,000 Cr)</span>
                 </div>
+                <div className="flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-amber-500"></span>
+                  <span><strong>SIR Zone:</strong> Falls within the notified Dholera Special Investment Region for accelerated growth</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Plot Pricing Reference */}
+            <div className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+              <h3 className="text-xl font-black text-slate-900">Plot Pricing (SIR Zone)</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
+                <div className="p-4 bg-slate-50 rounded-xl border border-slate-200 text-center">
+                  <p className="text-xs text-slate-500 font-semibold uppercase">Residential Plot</p>
+                  <p className="text-lg font-black text-amber-600">₹5,000<span className="text-xs text-slate-500 font-bold"> /Sq. Yd</span></p>
+                </div>
+                <div className="p-4 bg-slate-900 text-white rounded-xl text-center">
+                  <p className="text-xs text-slate-300 font-semibold uppercase">Commercial + Residence</p>
+                  <p className="text-lg font-black text-amber-400">₹10,000<span className="text-xs text-slate-300 font-bold"> /Sq. Yd</span></p>
+                </div>
+                <div className="p-4 bg-slate-50 rounded-xl border border-slate-200 text-center">
+                  <p className="text-xs text-slate-500 font-semibold uppercase">2000 Sq. Yd SIR Plot</p>
+                  <p className="text-lg font-black text-amber-600">₹20,000<span className="text-xs text-slate-500 font-bold"> /Sq. Yd</span></p>
+                </div>
               </div>
             </div>
 
@@ -153,7 +180,7 @@ export const ProjectDetailPage = ({ onOpenLeadModal }) => {
           {/* Right Column (4 cols) - Sticky Booking Card */}
           <div className="lg:col-span-4 sticky top-28 space-y-6">
             <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-xl space-y-6">
-              
+
               <div className="border-b border-slate-100 pb-4">
                 <p className="text-xs text-slate-500 uppercase font-bold tracking-wider">Starting Price</p>
                 <p className="text-3xl font-black text-amber-600">{project.price}</p>

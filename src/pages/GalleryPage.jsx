@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { 
-  Image as ImageIcon, 
-  Filter, 
-  Eye, 
-  X, 
-  Download, 
-  MapPin, 
-  Phone, 
+import {
+  Image as ImageIcon,
+  Filter,
+  Eye,
+  X,
+  Download,
+  MapPin,
+  Phone,
   Sparkles,
   Layers,
   Plane,
@@ -15,10 +15,9 @@ import {
 } from 'lucide-react';
 
 // Real Project Assets
-import posterImg1 from '../assets/mangalm 1.jpeg';
-import posterImg2 from '../assets/mangalam 2.jpeg';
+import posterImg1 from '../assets/plan.png';
 import billboardImg3 from '../assets/mangalam 3.jpeg';
-import invitationImg4 from '../assets/mangalam 4.jpeg';
+import invitationImg4 from '../assets/project.png';
 import mapPlanImg5 from '../assets/mangalam 5.jpeg';
 
 export const GalleryPage = ({ onOpenLeadModal }) => {
@@ -40,7 +39,7 @@ export const GalleryPage = ({ onOpenLeadModal }) => {
       title: 'Official DSIRDA Masterplan & Township Map',
       category: 'Masterplan & Maps',
       url: mapPlanImg5,
-      desc: 'Government draft development plan showing 3 Km distance to Dholera Airport and 1.5 Km from Ajju Hotel.'
+      desc: 'Government draft development plan showing 3.5 Km distance to Dholera Airport and 1.5 Km from Ajju Hotel, within the notified SIR.'
     },
     {
       id: 3,
@@ -60,7 +59,7 @@ export const GalleryPage = ({ onOpenLeadModal }) => {
       id: 5,
       title: 'High Growth & Investment Corridor',
       category: 'Connectivity',
-      url: posterImg2,
+      url: posterImg1,
       desc: 'Strategic high-ROI investment overview on Dholera SIR Expressway and Airport corridor.'
     },
     {
@@ -74,7 +73,7 @@ export const GalleryPage = ({ onOpenLeadModal }) => {
       id: 7,
       title: 'Ahmedabad-Dholera Access-Controlled Expressway',
       category: 'Connectivity',
-      url: 'https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=800&q=80',
+      url: 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=800&q=80',
       desc: '109 km 6-lane expressway connecting Ahmedabad to Dholera SIR in under 45 minutes.'
     },
     {
@@ -86,19 +85,19 @@ export const GalleryPage = ({ onOpenLeadModal }) => {
     }
   ];
 
-  const filtered = activeCategory === 'All' 
-    ? realGallery 
+  const filtered = activeCategory === 'All'
+    ? realGallery
     : realGallery.filter(item => item.category === activeCategory);
 
   return (
     <div className="bg-slate-50 min-h-screen pb-20 font-sans">
-      
+
       {/* ── Page Header ── */}
       <section className="relative py-20 bg-slate-950 text-white overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900 to-amber-950/40 opacity-90 z-10"></div>
-        <img 
-          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80" 
-          alt="Mangalam Aerovista Gallery" 
+        <img
+          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80"
+          alt="Mangalam Aerovista Gallery"
           className="absolute inset-0 w-full h-full object-cover opacity-30"
         />
         <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
@@ -109,7 +108,7 @@ export const GalleryPage = ({ onOpenLeadModal }) => {
             Project Gallery & Media
           </h1>
           <p className="text-slate-300 max-w-2xl mx-auto text-sm sm:text-base">
-            Explore official releases, Golden Rental scheme blueprints, DSIRDA approved town planning maps, and live on-ground project developments in Navagam, Dholera.
+            Explore official releases, Golden Rental scheme blueprints, DSIRDA approved town planning maps, and live on-ground project developments in Navagam, within the Dholera SIR (Special Investment Region).
           </p>
         </div>
       </section>
@@ -123,11 +122,10 @@ export const GalleryPage = ({ onOpenLeadModal }) => {
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-4 py-2 rounded text-xs sm:text-sm font-bold transition whitespace-nowrap cursor-pointer ${
-                  activeCategory === cat
-                    ? 'bg-slate-900 text-[#f5a623] shadow-sm'
-                    : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-                }`}
+                className={`px-4 py-2 rounded text-xs sm:text-sm font-bold transition whitespace-nowrap cursor-pointer ${activeCategory === cat
+                  ? 'bg-slate-900 text-[#f5a623] shadow-sm'
+                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                  }`}
               >
                 {cat}
               </button>
@@ -144,15 +142,15 @@ export const GalleryPage = ({ onOpenLeadModal }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filtered.map((item) => (
-            <div 
+            <div
               key={item.id}
               onClick={() => setSelectedImage(item)}
               className="group relative bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-2xl transition-all duration-300 cursor-pointer flex flex-col justify-between"
             >
               <div className="h-72 overflow-hidden relative bg-black flex items-center justify-center">
-                <img 
-                  src={item.url} 
-                  alt={item.title} 
+                <img
+                  src={item.url}
+                  alt={item.title}
                   className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
@@ -189,9 +187,9 @@ export const GalleryPage = ({ onOpenLeadModal }) => {
               <X size={20} />
             </button>
             <div className="h-[480px] sm:h-[560px] overflow-hidden bg-black flex items-center justify-center p-2">
-              <img 
-                src={selectedImage.url} 
-                alt={selectedImage.title} 
+              <img
+                src={selectedImage.url}
+                alt={selectedImage.title}
                 className="max-h-full max-w-full object-contain"
               />
             </div>
@@ -219,7 +217,7 @@ export const GalleryPage = ({ onOpenLeadModal }) => {
             Want to Inspect Mangalam Aerovista on Site?
           </h3>
           <p className="text-slate-300 text-sm max-w-xl mx-auto">
-            We arrange complimentary VIP site visits with AC vehicle pickup from Ahmedabad to Navagam (just 3 Km from Dholera Airport).
+            We arrange complimentary VIP site visits with AC vehicle pickup from Ahmedabad to Navagam (just 3.5 Km from Dholera Airport).
           </p>
           <button
             onClick={onOpenLeadModal}

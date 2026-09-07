@@ -1,14 +1,14 @@
 import React from 'react';
-import { 
-  ShieldCheck, 
-  Award, 
-  MapPin, 
-  Target, 
-  Eye, 
-  Users, 
-  Phone, 
-  Plane, 
-  Hotel, 
+import {
+  ShieldCheck,
+  Award,
+  MapPin,
+  Target,
+  Eye,
+  Users,
+  Phone,
+  Plane,
+  Hotel,
   CheckCircle2,
   Building,
   TrendingUp,
@@ -16,19 +16,19 @@ import {
   Sparkles
 } from 'lucide-react';
 import { projectHighlights } from '../data';
-import invitationImg4 from '../assets/mangalam 4.jpeg';
+import invitationImg4 from '../assets/project.png';
 import mapPlanImg5 from '../assets/mangalam 5.jpeg';
 
 export const AboutPage = ({ onOpenLeadModal }) => {
   return (
     <div className="bg-white font-sans">
-      
+
       {/* ── Header Banner ── */}
       <section className="relative py-20 bg-slate-950 text-white overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900 to-amber-950/40 opacity-90 z-10"></div>
-        <img 
-          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80" 
-          alt="Mangalam Aerovista Dholera" 
+        <img
+          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80"
+          alt="Mangalam Aerovista Dholera"
           className="absolute inset-0 w-full h-full object-cover opacity-30"
         />
         <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
@@ -39,7 +39,7 @@ export const AboutPage = ({ onOpenLeadModal }) => {
             A Visionary Project Taking Off Towards a Greater Tomorrow
           </h1>
           <p className="text-slate-300 max-w-2xl mx-auto text-sm sm:text-base">
-            Located at Navagam (Navagan), precisely 3 Km from Dholera International Airport and 1.5 Km from Ajju Hotel. Delivering secure, high-ROI plotting schemes under DSIRDA Gandhinagar.
+            Located at Navagam (Navagan), precisely 3.5 Km from Dholera International Airport and 1.5 Km from Ajju Hotel. Delivering secure, high-ROI plotting schemes under DSIRDA Gandhinagar within the notified Special Investment Region (SIR).
           </p>
         </div>
       </section>
@@ -64,7 +64,7 @@ export const AboutPage = ({ onOpenLeadModal }) => {
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
+
             <div className="lg:col-span-6 space-y-6">
               <div className="inline-block px-3 py-1 bg-amber-100 text-amber-900 rounded text-xs font-bold uppercase tracking-wider">
                 Our Genesis & Strategic Location
@@ -73,7 +73,7 @@ export const AboutPage = ({ onOpenLeadModal }) => {
                 Navagam's Most Prestigious Airport Corridor Township
               </h2>
               <p className="text-slate-600 text-sm leading-relaxed">
-                Mangalam Aerovista is an iconic plotting landmark in Dholera Smart City SIR, presented by <strong>Gaim Park Infra</strong> and <strong>Mangalam Aerovista Pvt. Ltd.</strong> We are situated in Navagam, offering direct proximity to the upcoming Dholera International Airport (just 3 Km) and the commercial center surrounding Ajju Hotel (1.5 Km).
+                Mangalam Aerovista is an iconic plotting landmark in Dholera Smart City SIR, presented by <strong>Gaim Park Infra</strong> and <strong>Mangalam Aerovista Pvt. Ltd.</strong> We are situated in Navagam, within the notified Special Investment Region (SIR), offering direct proximity to the upcoming Dholera International Airport (just 3.5 Km) and the commercial center surrounding Ajju Hotel (1.5 Km).
               </p>
               <p className="text-slate-600 text-sm leading-relaxed">
                 With full NA approvals, DSIRDA town planning sanctions, and wide internal avenues, every plot is demarcated with individual boundary pillars and ready for immediate registry.
@@ -85,7 +85,7 @@ export const AboutPage = ({ onOpenLeadModal }) => {
                     <Plane size={18} />
                   </div>
                   <h4 className="font-bold text-slate-900 text-sm">Airport Corridor</h4>
-                  <p className="text-xs text-slate-500">Only 3 Km from the international runway and dedicated air cargo hub.</p>
+                  <p className="text-xs text-slate-500">Only 3.5 Km from the international runway and dedicated air cargo hub.</p>
                 </div>
                 <div className="p-4 bg-white rounded border border-slate-200 shadow-sm space-y-1">
                   <div className="w-8 h-8 rounded bg-amber-100 text-amber-800 flex items-center justify-center font-bold text-sm">
@@ -93,6 +93,20 @@ export const AboutPage = ({ onOpenLeadModal }) => {
                   </div>
                   <h4 className="font-bold text-slate-900 text-sm">Commercial Frontage</h4>
                   <p className="text-xs text-slate-500">1.5 Km from Ajju Hotel & major hospitality developments.</p>
+                </div>
+                <div className="p-4 bg-white rounded border border-slate-200 shadow-sm space-y-1">
+                  <div className="w-8 h-8 rounded bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-sm">
+                    <ShieldCheck size={18} />
+                  </div>
+                  <h4 className="font-bold text-slate-900 text-sm">SIR Zone Status</h4>
+                  <p className="text-xs text-slate-500">Notified under the Special Investment Region for accelerated infrastructure growth.</p>
+                </div>
+                <div className="p-4 bg-white rounded border border-slate-200 shadow-sm space-y-1">
+                  <div className="w-8 h-8 rounded bg-purple-100 text-purple-800 flex items-center justify-center font-bold text-sm">
+                    <Plane size={18} />
+                  </div>
+                  <h4 className="font-bold text-slate-900 text-sm">Dholera Int'l Airport</h4>
+                  <p className="text-xs text-slate-500">~108 Km from Ahmedabad via the upcoming 6-lane expressway.</p>
                 </div>
               </div>
 
@@ -120,6 +134,26 @@ export const AboutPage = ({ onOpenLeadModal }) => {
                   <li className="flex items-center gap-2">
                     <CheckCircle2 size={18} className="text-emerald-400 shrink-0" />
                     <span><strong>Total DSIR Plan:</strong> 920 sq. km TP Development Area</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-xl space-y-4">
+                <h3 className="text-xl font-black text-slate-900" style={{ fontFamily: 'Outfit, sans-serif' }}>
+                  Plot Pricing (SIR Zone)
+                </h3>
+                <ul className="space-y-3 text-xs sm:text-sm text-slate-700">
+                  <li className="flex items-center justify-between border-b border-slate-100 pb-2">
+                    <span>Residential Plot</span>
+                    <span className="font-black text-[#f5a623]">₹5,000 / Sq. Yard</span>
+                  </li>
+                  <li className="flex items-center justify-between border-b border-slate-100 pb-2">
+                    <span>Commercial + Residence Plot</span>
+                    <span className="font-black text-[#f5a623]">₹10,000 / Sq. Yard</span>
+                  </li>
+                  <li className="flex items-center justify-between">
+                    <span>2000 Sq. Yard SIR Plot</span>
+                    <span className="font-black text-[#f5a623]">₹20,000 / Sq. Yard</span>
                   </li>
                 </ul>
               </div>

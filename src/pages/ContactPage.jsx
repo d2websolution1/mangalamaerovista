@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { 
-  MapPin, 
-  Phone, 
-  Mail, 
-  Clock, 
-  Send, 
-  CheckCircle2, 
-  ShieldCheck, 
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
+  Send,
+  CheckCircle2,
+  ShieldCheck,
   MessageSquare,
   Building,
   User
@@ -31,13 +31,13 @@ export const ContactPage = () => {
 
   return (
     <div className="bg-slate-50 min-h-screen pb-20 font-sans">
-      
+
       {/* ── Page Header ── */}
       <section className="relative py-20 bg-slate-950 text-white overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900 to-amber-950/40 opacity-90 z-10"></div>
-        <img 
-          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80" 
-          alt="Contact Mangalam Aerovista" 
+        <img
+          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80"
+          alt="Contact Mangalam Aerovista"
           className="absolute inset-0 w-full h-full object-cover opacity-30"
         />
         <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
@@ -75,7 +75,7 @@ export const ContactPage = () => {
       {/* ── Main Form & Site Location ── */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-          
+
           {/* Form (7 cols) */}
           <div className="lg:col-span-7 bg-white p-8 sm:p-10 rounded-2xl border border-slate-200 shadow-sm space-y-6">
             <div>
@@ -155,7 +155,10 @@ export const ContactPage = () => {
                       className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded text-sm focus:ring-2 focus:ring-[#f5a623] focus:outline-none"
                     >
                       <option value="Golden Rental Scheme (₹25k/Mo)">Golden Rental Scheme (₹25k/Mo)</option>
-                      <option value="Mangalam Aerovista Plots (3 Km Airport)">Mangalam Aerovista Plots (3 Km Airport)</option>
+                      <option value="Residential Plot (₹5,000/Sq. Yard)">Residential Plot (₹5,000/Sq. Yard)</option>
+                      <option value="Commercial + Residence Plot (₹10,000/Sq. Yard)">Commercial + Residence Plot (₹10,000/Sq. Yard)</option>
+                      <option value="2000 Sq. Yard SIR Plot (₹20,000/Sq. Yard)">2000 Sq. Yard SIR Plot (₹20,000/Sq. Yard)</option>
+                      <option value="Mangalam Aerovista Plots (3.5 Km Airport)">Mangalam Aerovista Plots (3.5 Km Airport)</option>
                       <option value="Book VIP Site Visit (Free AC Cab)">Book VIP Site Visit (Free AC Cab)</option>
                       <option value="Commercial / Hotel Land">Commercial / Hotel Land</option>
                     </select>
@@ -193,13 +196,13 @@ export const ContactPage = () => {
               <h3 className="text-xl font-black text-[#f5a623]" style={{ fontFamily: 'Outfit, sans-serif' }}>
                 Township & Office Details
               </h3>
-              
+
               <div className="space-y-4 text-xs sm:text-sm text-slate-300">
                 <div className="flex items-start gap-3">
                   <MapPin size={20} className="text-[#f5a623] shrink-0 mt-0.5" />
                   <div>
                     <strong className="text-white block mb-0.5">Project Location:</strong>
-                    <span>Mangalam Aerovista, Navagam (Navagan), 3 Km from Dholera International Airport & 1.5 Km from Ajju Hotel, Gujarat</span>
+                    <span>Mangalam Aerovista, Navagam (Navagan), within the notified SIR (Special Investment Region) — 3.5 Km from Dholera International Airport & 1.5 Km from Ajju Hotel, Gujarat</span>
                   </div>
                 </div>
 
@@ -210,6 +213,25 @@ export const ContactPage = () => {
                     <span>Mangalam Aerovista Pvt. Ltd. | Gaim Park Infra</span>
                   </div>
                 </div>
+              </div>
+
+              {/* Plot Pricing Quick Reference */}
+              <div className="p-4 bg-white/5 border border-white/10 rounded-xl space-y-2">
+                <p className="text-xs font-bold text-[#f5a623]">Plot Pricing (SIR Zone)</p>
+                <ul className="space-y-1.5 text-[11px] text-slate-300">
+                  <li className="flex items-center justify-between">
+                    <span>Residential Plot</span>
+                    <span className="font-bold text-white">₹5,000 / Sq. Yard</span>
+                  </li>
+                  <li className="flex items-center justify-between">
+                    <span>Commercial + Residence Plot</span>
+                    <span className="font-bold text-white">₹10,000 / Sq. Yard</span>
+                  </li>
+                  <li className="flex items-center justify-between">
+                    <span>2000 Sq. Yard SIR Plot</span>
+                    <span className="font-bold text-white">₹20,000 / Sq. Yard</span>
+                  </li>
+                </ul>
               </div>
 
               {/* Free Transport Badge */}

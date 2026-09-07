@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Building2, 
-  MapPin, 
-  TrendingUp, 
-  ShieldCheck, 
-  Users, 
-  Plane, 
-  ArrowRight, 
-  Play, 
-  Home, 
-  Coins, 
-  CheckCircle2, 
-  PhoneCall, 
-  Send, 
-  Flame, 
+import {
+  Building2,
+  MapPin,
+  TrendingUp,
+  ShieldCheck,
+  Users,
+  Plane,
+  ArrowRight,
+  Play,
+  Home,
+  Coins,
+  CheckCircle2,
+  PhoneCall,
+  Send,
+  Flame,
   ChevronRight,
   ChevronDown,
   ChevronUp,
@@ -33,16 +33,15 @@ import {
 } from 'lucide-react';
 
 // Imported Real Project Asset Images from assets folder
-import posterImg1 from '../assets/mangalm 1.jpeg'; // Golden Rental scheme ₹25k/mo poster
+import posterImg1 from '../assets/plan.png'; // Golden Rental scheme ₹25k/mo poster
 import posterImg2 from '../assets/mangalam 2.jpeg'; // R&B Infra / High ROI
 import billboardImg3 from '../assets/mangalam 3.jpeg'; // Gaim Park Aero Vista on-ground billboard
-import invitationImg4 from '../assets/mangalam 4.jpeg'; // Mangalam Aerovista Grand Launch Invitation
-import mapPlanImg5 from '../assets/mangalam 5.jpeg'; // Official DSIR Town Planning Map (3km airport, 1.5km Ajju Hotel)
+import invitationImg4 from '../assets/project.png'; // Mangalam Aerovista Grand Launch Invitation
+import mapPlanImg5 from '../assets/mangalam 5.jpeg'; // Official DSIR Town Planning Map (3.5km airport, 1.5km Ajju Hotel)
 
 import { projectsData, testimonialsData, faqsData, projectHighlights } from '../data';
 
 export const HomePage = ({ onOpenLeadModal }) => {
-  const [lang, setLang] = useState('en'); // 'en' | 'hi'
   const [openFaq, setOpenFaq] = useState(0);
 
   // Quick enquiry form state
@@ -50,7 +49,7 @@ export const HomePage = ({ onOpenLeadModal }) => {
     name: '',
     phone: '',
     email: '',
-    project: 'Mangalam Aerovista (3 Km Airport)'
+    project: 'Mangalam Aerovista (3.5 Km Airport)'
   });
   const [leadSuccess, setLeadSuccess] = useState(false);
 
@@ -62,7 +61,7 @@ export const HomePage = ({ onOpenLeadModal }) => {
   const interactiveFaqs = [
     {
       q: "Why should I invest in Mangalam Aerovista?",
-      a: "Mangalam Aerovista is located in Navagam, precisely 3 Km from Dholera International Airport and 1.5 Km from Ajju Hotel. It offers 100% NA received, DSIRDA approved plots with Golden Rental scheme providing ₹25,000 / month advance rent and guaranteed ₹20 Lakhs buyback after 2 years."
+      a: "Mangalam Aerovista is located in Navagam, precisely 3.5 Km from Dholera International Airport and 1.5 Km from Ajju Hotel. It offers 100% NA received, DSIRDA approved plots with Golden Rental scheme providing ₹25,000 / month advance rent and guaranteed ₹20 Lakhs buyback after 2 years."
     },
     {
       q: "What types of properties are available in Mangalam Aerovista?",
@@ -80,25 +79,6 @@ export const HomePage = ({ onOpenLeadModal }) => {
 
   return (
     <div className="bg-white text-slate-900 font-sans selection:bg-[#f5a623] selection:text-black">
-      
-      {/* ─── FLOATING LANGUAGE SELECTOR ─── */}
-      <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full shadow-2xl border border-slate-200 flex items-center gap-3 text-xs font-bold text-slate-800">
-        <button 
-          onClick={() => setLang('en')}
-          className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full transition-all ${lang === 'en' ? 'bg-slate-900 text-white shadow' : 'hover:text-[#f5a623]'}`}
-        >
-          <span>🇬🇧</span>
-          <span>English</span>
-        </button>
-        <span className="text-slate-300">|</span>
-        <button 
-          onClick={() => setLang('hi')}
-          className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full transition-all ${lang === 'hi' ? 'bg-[#f5a623] text-black shadow' : 'hover:text-[#f5a623]'}`}
-        >
-          <span>🇮🇳</span>
-          <span>हिंदी</span>
-        </button>
-      </div>
 
       {/* ════════════════════════════════════════════════════════════════════════
           SECTION 1: HERO SLIDER / BANNER WITH WHITE FLOATING CARD & ZERO BROKERAGE RIBBON
@@ -106,9 +86,9 @@ export const HomePage = ({ onOpenLeadModal }) => {
       <section className="relative min-h-[580px] lg:min-h-[640px] flex items-center bg-slate-950 overflow-hidden">
         {/* Background building image with subtle overlay */}
         <div className="absolute inset-0 z-0">
-          <img 
-            src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1920&q=80" 
-            alt="Mangalam Aerovista" 
+          <img
+            src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1920&q=80"
+            alt="Mangalam Aerovista"
             className="w-full h-full object-cover object-center opacity-70 filter brightness-90"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
@@ -116,7 +96,7 @@ export const HomePage = ({ onOpenLeadModal }) => {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-16 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            
+
             {/* Left White Floating Overlay Card */}
             <div className="lg:col-span-6 bg-white/95 backdrop-blur-md p-8 sm:p-10 rounded-sm shadow-2xl border-l-4 border-[#f5a623] max-w-xl">
               <span className="text-[#f5a623] font-black tracking-widest text-lg sm:text-2xl uppercase block mb-1" style={{ fontFamily: 'Outfit, sans-serif' }}>
@@ -126,12 +106,9 @@ export const HomePage = ({ onOpenLeadModal }) => {
                 Mangalam Aerovista <br />
                 <span className="text-2xl sm:text-3xl text-slate-800 font-extrabold">Navagam Township</span>
               </h1>
-              
+
               <p className="text-slate-600 text-sm sm:text-base leading-relaxed mb-6 font-normal">
-                {lang === 'hi' 
-                  ? 'मंगलम एरोविस्ता (नवागाम) इंटरनेशनल एयरपोर्ट से मात्र 3 किमी और अज्जू होटल से 1.5 किमी की दूरी पर स्थित है। भारत का सबसे तेजी से विकसित होने वाला स्मार्ट टाउनशिप प्रोजेक्ट।'
-                  : 'Mangalam Aerovista at Navagam is located just 3 Km from International Airport and 1.5 Km from Ajju Hotel. The most promising and fastest developing smart township in Gujarat.'
-                }
+                Mangalam Aerovista at Navagam is located just 3.5 Km from International Airport and 1.5 Km from Ajju Hotel. The most promising and fastest developing smart township in Gujarat.
               </p>
 
               <div className="flex flex-wrap items-center gap-4">
@@ -178,7 +155,7 @@ export const HomePage = ({ onOpenLeadModal }) => {
       <section className="py-16 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-            
+
             {/* Left Content (6 Cols) */}
             <div className="lg:col-span-6 space-y-6">
               <div>
@@ -194,7 +171,11 @@ export const HomePage = ({ onOpenLeadModal }) => {
               <ul className="space-y-4 text-sm text-slate-700 leading-relaxed">
                 <li className="flex items-start gap-3">
                   <span className="text-[#f5a623] font-black text-base mt-0.5">✓</span>
-                  <span><strong>Prime Airport Gated Township</strong> located just 3 Km from International Airport runway and 1.5 Km from Ajju Hotel in Navagam.</span>
+                  <span><strong>Prime Airport Gated Township</strong> located just 3.5 Km from International Airport runway and 1.5 Km from Ajju Hotel in Navagam.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-[#f5a623] font-black text-base mt-0.5">✓</span>
+                  <span><strong>SIR (Special Investment Region) Zone</strong> — Mangalam Aerovista falls within the notified SIR, unlocking accelerated infrastructure development and long-term value growth.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-[#f5a623] font-black text-base mt-0.5">✓</span>
@@ -227,7 +208,7 @@ export const HomePage = ({ onOpenLeadModal }) => {
 
             {/* Right Dual Visual: DMIC Corridor Graphic + Photo (6 Cols) */}
             <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4 items-center">
-              
+
               {/* Box A: Corridor Graphic + 1386 km Box */}
               <div className="bg-[#1b4353] rounded-lg p-5 text-white flex flex-col justify-between min-h-[380px] shadow-lg relative overflow-hidden">
                 <div className="space-y-2">
@@ -240,7 +221,7 @@ export const HomePage = ({ onOpenLeadModal }) => {
                 <div className="my-4 flex items-center justify-center py-4 bg-slate-900/40 rounded-lg">
                   <div className="text-center space-y-2">
                     <span className="inline-block px-3 py-1 bg-emerald-500 text-slate-950 font-black text-xs rounded-full">
-                      Dadri (UP)
+                      Gujarat
                     </span>
                     <div className="h-12 w-1 bg-gradient-to-b from-emerald-500 via-amber-400 to-rose-500 mx-auto" />
                     <span className="inline-block px-3 py-1 bg-[#f5a623] text-black font-black text-xs rounded-full animate-pulse">
@@ -262,9 +243,9 @@ export const HomePage = ({ onOpenLeadModal }) => {
 
               {/* Box B: Real Photo with Gold Play/Highlight Box */}
               <div className="relative rounded-lg overflow-hidden shadow-lg h-[380px] group">
-                <img 
-                  src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" 
-                  alt="Mangalam Aerovista" 
+                <img
+                  src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80"
+                  alt="Mangalam Aerovista"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute top-4 right-4 w-10 h-10 bg-[#f5a623] text-black flex items-center justify-center font-bold shadow-lg">
@@ -287,13 +268,13 @@ export const HomePage = ({ onOpenLeadModal }) => {
           ════════════════════════════════════════════════════════════════════════ */}
       <section className="relative bg-[#1e2229] text-white py-16 sm:py-20 overflow-hidden">
         {/* Yellow right triangular decorative block */}
-        <div 
+        <div
           className="hidden lg:block absolute right-0 top-0 bottom-0 w-64 bg-[#f5a623]"
           style={{ clipPath: 'polygon(100% 0, 0 100%, 100% 100%)' }}
         />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          
+
           <div className="max-w-2xl mb-12 space-y-2">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white" style={{ fontFamily: 'Outfit, sans-serif' }}>
               Mangalam Aerovista Facts
@@ -305,7 +286,7 @@ export const HomePage = ({ onOpenLeadModal }) => {
 
           {/* 4 Pillars Stats Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 pt-4">
-            
+
             {/* Fact 1 */}
             <div className="space-y-2">
               <div className="text-[#f5a623] mb-1">
@@ -360,9 +341,9 @@ export const HomePage = ({ onOpenLeadModal }) => {
           ════════════════════════════════════════════════════════════════════════ */}
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-            
+
             {/* Left Headline & View All Button (4 Cols) */}
             <div className="lg:col-span-4 space-y-5">
               <span className="text-[#f5a623] font-bold text-xs uppercase tracking-widest block">
@@ -387,7 +368,7 @@ export const HomePage = ({ onOpenLeadModal }) => {
 
             {/* Right 2x2 Feature Cards Grid (8 Cols) */}
             <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
-              
+
               {/* Card 1: Mangalam Aerovista Projects */}
               <div className="bg-white p-7 rounded-sm shadow-sm border border-slate-200/80 space-y-3 hover:shadow-md transition">
                 <div className="w-10 h-10 text-[#f5a623]">
@@ -397,7 +378,7 @@ export const HomePage = ({ onOpenLeadModal }) => {
                   Mangalam Aerovista Township
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                  Located at Navagam, exactly 3 Km from International Airport with planned residential & commercial plots, boundary demarcation, and wide roads.
+                  Located at Navagam, exactly 3.5 Km from International Airport with planned residential & commercial plots, boundary demarcation, and wide roads.
                 </p>
               </div>
 
@@ -423,7 +404,7 @@ export const HomePage = ({ onOpenLeadModal }) => {
                   Verified Residential Plots
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                  100% NA received, clear title deeds, and DSIRDA Gandhinagar approved masterplans ready for instant registry with immediate bank loan support.
+                  Starting at <strong>₹5,000 / Sq. Yard</strong>. 100% NA received, clear title deeds, and DSIRDA Gandhinagar approved masterplans ready for instant registry with immediate bank loan support.
                 </p>
               </div>
 
@@ -436,10 +417,104 @@ export const HomePage = ({ onOpenLeadModal }) => {
                   International Airport Corridor
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                  Strategically situated in Navagam, adjacent to Mangalam Aerovista (just 3 Km away) and 1.5 Km from Ajju Hotel on the expressway link.
+                  Strategically situated in Navagam, adjacent to Mangalam Aerovista (just 3.5 Km away) and 1.5 Km from Ajju Hotel on the expressway link.
                 </p>
               </div>
 
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      {/* ════════════════════════════════════════════════════════════════════════
+          SECTION 4B: "INVESTMENT & PRICING OPTIONS" (SIR Zone Plot Tiers)
+          ════════════════════════════════════════════════════════════════════════ */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          <div className="text-center max-w-3xl mx-auto mb-14 space-y-2">
+            <span className="text-[#f5a623] font-bold text-xs uppercase tracking-widest">
+              SIR Zone Investment Options
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-black text-slate-900" style={{ fontFamily: 'Outfit, sans-serif' }}>
+              Choose Your Plot &amp; Pricing Tier
+            </h2>
+            <p className="text-slate-600 text-sm">
+              Transparent, DSIRDA-approved rates across residential, commercial, and large-format SIR plots at Mangalam Aerovista.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            {/* Tier 1: Residential Plot */}
+            <div className="bg-white p-7 rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition space-y-4">
+              <div className="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-[#f5a623]">
+                <Home size={24} strokeWidth={1.75} />
+              </div>
+              <h3 className="text-lg font-black text-slate-900" style={{ fontFamily: 'Outfit, sans-serif' }}>
+                Residential Plot
+              </h3>
+              <p className="text-3xl font-black text-[#f5a623]" style={{ fontFamily: 'Outfit, sans-serif' }}>
+                ₹5,000 <span className="text-sm text-slate-500 font-bold">/ Sq. Yard</span>
+              </p>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Ideal entry-level plots for families and end-use buyers, fully NA approved with clear title.
+              </p>
+              <button
+                onClick={onOpenLeadModal}
+                className="w-full py-2.5 bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs uppercase rounded transition cursor-pointer"
+              >
+                Enquire Now
+              </button>
+            </div>
+
+            {/* Tier 2: Commercial Plot */}
+            <div className="bg-slate-900 text-white p-7 rounded-lg shadow-xl space-y-4 relative overflow-hidden">
+              <div className="absolute top-3 right-3 bg-[#f5a623] text-black font-black text-[10px] uppercase px-2.5 py-1 rounded">
+                Most Popular
+              </div>
+              <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-[#f5a623]">
+                <Building2 size={24} strokeWidth={1.75} />
+              </div>
+              <h3 className="text-lg font-black text-white" style={{ fontFamily: 'Outfit, sans-serif' }}>
+                Commercial + Residence Plot
+              </h3>
+              <p className="text-3xl font-black text-[#f5a623]" style={{ fontFamily: 'Outfit, sans-serif' }}>
+                ₹10,000 <span className="text-sm text-slate-300 font-bold">/ Sq. Yard</span>
+              </p>
+              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                Mixed-use plots on the airport approach road, suited for shops, offices, and combined residence use.
+              </p>
+              <button
+                onClick={onOpenLeadModal}
+                className="w-full py-2.5 bg-[#f5a623] hover:bg-[#e0961d] text-black font-extrabold text-xs uppercase rounded transition cursor-pointer"
+              >
+                Enquire Now
+              </button>
+            </div>
+
+            {/* Tier 3: Large Format SIR Plot */}
+            <div className="bg-white p-7 rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition space-y-4">
+              <div className="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-[#f5a623]">
+                <Layers size={24} strokeWidth={1.75} />
+              </div>
+              <h3 className="text-lg font-black text-slate-900" style={{ fontFamily: 'Outfit, sans-serif' }}>
+                2000 Sq. Yard SIR Plot
+              </h3>
+              <p className="text-3xl font-black text-[#f5a623]" style={{ fontFamily: 'Outfit, sans-serif' }}>
+                ₹20,000 <span className="text-sm text-slate-500 font-bold">/ Sq. Yard</span>
+              </p>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Premium large-format land parcel within the notified Special Investment Region (SIR) — built for long-term institutional and bulk investors.
+              </p>
+              <button
+                onClick={onOpenLeadModal}
+                className="w-full py-2.5 bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs uppercase rounded transition cursor-pointer"
+              >
+                Enquire Now
+              </button>
             </div>
 
           </div>
@@ -453,9 +528,9 @@ export const HomePage = ({ onOpenLeadModal }) => {
       <section className="relative py-20 bg-slate-900 text-white overflow-hidden">
         {/* Blueprint architectural schematic background */}
         <div className="absolute inset-0 opacity-20">
-          <img 
-            src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1920&q=80" 
-            alt="Architectural Blueprint" 
+          <img
+            src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1920&q=80"
+            alt="Architectural Blueprint"
             className="w-full h-full object-cover grayscale"
           />
         </div>
@@ -486,15 +561,15 @@ export const HomePage = ({ onOpenLeadModal }) => {
       <section className="relative py-20 bg-slate-900 text-white overflow-hidden">
         {/* Blueprint background overlay */}
         <div className="absolute inset-0 opacity-15">
-          <img 
-            src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1920&q=80" 
-            alt="Blueprint Background" 
+          <img
+            src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1920&q=80"
+            alt="Blueprint Background"
             className="w-full h-full object-cover grayscale"
           />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           <div className="text-center max-w-2xl mx-auto mb-14 space-y-2">
             <h2 className="text-4xl sm:text-5xl font-black text-white tracking-tight" style={{ fontFamily: 'Outfit, sans-serif' }}>
               Testimonials
@@ -506,14 +581,14 @@ export const HomePage = ({ onOpenLeadModal }) => {
 
           {/* 3 Columns White Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            
+
             {/* Card 1: Renu Halder */}
             <div className="bg-white rounded-none p-8 text-center text-slate-900 shadow-2xl flex flex-col justify-between items-center space-y-6">
               <div className="flex flex-col items-center">
                 <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-[#f5a623] mb-3 shadow-md">
-                  <img 
-                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80" 
-                    alt="Renu Halder" 
+                  <img
+                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80"
+                    alt="Renu Halder"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -539,9 +614,9 @@ export const HomePage = ({ onOpenLeadModal }) => {
             <div className="bg-white rounded-none p-8 text-center text-slate-900 shadow-2xl flex flex-col justify-between items-center space-y-6">
               <div className="flex flex-col items-center">
                 <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-[#f5a623] mb-3 shadow-md">
-                  <img 
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" 
-                    alt="Gaurav Arora" 
+                  <img
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80"
+                    alt="Gaurav Arora"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -558,7 +633,7 @@ export const HomePage = ({ onOpenLeadModal }) => {
                   100% Genuine Proximity to Airport & Ajju Hotel
                 </p>
                 <p>
-                  I visited the site in Navagam and purchased a plot. Every commitment made regarding 3 Km airport distance and ₹25,000/mo advance rent was fulfilled on time. Great knowledge and honest dealing.
+                  I visited the site in Navagam and purchased a plot. Every commitment made regarding 3.5 Km airport distance and ₹25,000/mo advance rent was fulfilled on time. Great knowledge and honest dealing.
                 </p>
               </div>
             </div>
@@ -567,9 +642,9 @@ export const HomePage = ({ onOpenLeadModal }) => {
             <div className="bg-white rounded-none p-8 text-center text-slate-900 shadow-2xl flex flex-col justify-between items-center space-y-6">
               <div className="flex flex-col items-center">
                 <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-[#f5a623] mb-3 shadow-md">
-                  <img 
-                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80" 
-                    alt="Lalit Kumar" 
+                  <img
+                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80"
+                    alt="Lalit Kumar"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -601,9 +676,9 @@ export const HomePage = ({ onOpenLeadModal }) => {
           ════════════════════════════════════════════════════════════════════════ */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-            
+
             {/* Left Column (7 Cols) - FAQ Accordion */}
             <div className="lg:col-span-7 space-y-6">
               <div>
@@ -620,15 +695,14 @@ export const HomePage = ({ onOpenLeadModal }) => {
                 {interactiveFaqs.map((faq, idx) => {
                   const isOpen = openFaq === idx;
                   return (
-                    <div 
+                    <div
                       key={idx}
                       className="rounded border border-slate-200 overflow-hidden shadow-sm transition-all duration-200"
                     >
                       <button
                         onClick={() => setOpenFaq(isOpen ? -1 : idx)}
-                        className={`w-full p-4 sm:p-5 text-left flex items-center justify-between gap-4 font-bold text-sm sm:text-base transition-colors cursor-pointer ${
-                          isOpen ? 'bg-[#f5a623] text-black' : 'bg-white text-slate-900 hover:bg-slate-50'
-                        }`}
+                        className={`w-full p-4 sm:p-5 text-left flex items-center justify-between gap-4 font-bold text-sm sm:text-base transition-colors cursor-pointer ${isOpen ? 'bg-[#f5a623] text-black' : 'bg-white text-slate-900 hover:bg-slate-50'
+                          }`}
                         style={{ fontFamily: 'Outfit, sans-serif' }}
                       >
                         <span>{faq.q}</span>
@@ -657,16 +731,16 @@ export const HomePage = ({ onOpenLeadModal }) => {
                 <span className="text-xs font-bold text-[#f5a623] uppercase tracking-wider">DSIRDA Gandhinagar</span>
                 <span className="text-xs font-bold text-slate-700">Official Masterplan Map</span>
               </div>
-              
+
               {/* Image mangalam 5.jpeg */}
               <div className="relative rounded-xl overflow-hidden bg-white border border-slate-200 shadow-inner group">
-                <img 
-                  src={mapPlanImg5} 
-                  alt="Mangalam Aerovista DSIRDA Official Masterplan Map" 
+                <img
+                  src={mapPlanImg5}
+                  alt="Mangalam Aerovista DSIRDA Official Masterplan Map"
                   className="w-full h-auto object-contain max-h-[520px] mx-auto group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute top-3 left-3 bg-[#f5a623] text-black font-extrabold text-[10px] uppercase px-2.5 py-1 rounded shadow">
-                  ★ 3 Km to Airport • 1.5 Km to Ajju Hotel
+                  ★ 3.5 Km to Airport • 1.5 Km to Ajju Hotel
                 </div>
               </div>
 
@@ -696,7 +770,7 @@ export const HomePage = ({ onOpenLeadModal }) => {
           ════════════════════════════════════════════════════════════════════════ */}
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           <div className="text-center max-w-3xl mx-auto mb-14 space-y-2">
             <span className="text-[#f5a623] font-bold text-xs uppercase tracking-widest">
               Official Project Releases
@@ -711,13 +785,13 @@ export const HomePage = ({ onOpenLeadModal }) => {
 
           {/* Asset Showcase Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            
+
             {/* Card 1: Golden Rental Scheme Poster */}
             <div className="bg-slate-900 text-white rounded-xl overflow-hidden shadow-xl border border-amber-500/30 flex flex-col justify-between group">
               <div className="relative overflow-hidden bg-black max-h-80">
-                <img 
-                  src={posterImg1} 
-                  alt="Golden Rental Plan Mangalam Aerovista" 
+                <img
+                  src={posterImg1}
+                  alt="Golden Rental Plan Mangalam Aerovista"
                   className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute top-3 left-3 bg-red-600 text-white font-black text-xs px-3 py-1 rounded shadow">
@@ -741,9 +815,9 @@ export const HomePage = ({ onOpenLeadModal }) => {
             {/* Card 2: On-Ground Billboard & Township */}
             <div className="bg-slate-900 text-white rounded-xl overflow-hidden shadow-xl border border-slate-800 flex flex-col justify-between group">
               <div className="relative overflow-hidden bg-black max-h-80">
-                <img 
-                  src={billboardImg3} 
-                  alt="Aero Vista Gated Township Billboard" 
+                <img
+                  src={billboardImg3}
+                  alt="Aero Vista Gated Township Billboard"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute top-3 left-3 bg-[#f5a623] text-black font-black text-xs px-3 py-1 rounded shadow">
@@ -767,9 +841,9 @@ export const HomePage = ({ onOpenLeadModal }) => {
             {/* Card 3: Grand Launch Invitation */}
             <div className="bg-slate-900 text-white rounded-xl overflow-hidden shadow-xl border border-slate-800 flex flex-col justify-between group">
               <div className="relative overflow-hidden bg-black max-h-80">
-                <img 
-                  src={invitationImg4} 
-                  alt="Mangalam Aerovista Grand Launch Invitation" 
+                <img
+                  src={invitationImg4}
+                  alt="Mangalam Aerovista Grand Launch Invitation"
                   className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute top-3 left-3 bg-blue-600 text-white font-bold text-xs px-3 py-1 rounded shadow">
@@ -800,7 +874,7 @@ export const HomePage = ({ onOpenLeadModal }) => {
           ════════════════════════════════════════════════════════════════════════ */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
             <div>
               <span className="text-[#f5a623] font-bold text-xs uppercase tracking-widest">
@@ -820,13 +894,13 @@ export const HomePage = ({ onOpenLeadModal }) => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projectsData.slice(0, 3).map((proj) => (
-              <div 
+              <div
                 key={proj.id}
                 className="bg-white rounded-lg overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
               >
                 <div className="relative h-56 overflow-hidden">
-                  <img 
-                    src={proj.image} 
+                  <img
+                    src={proj.image}
                     alt={proj.title}
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                   />
