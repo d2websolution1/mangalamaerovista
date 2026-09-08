@@ -48,7 +48,12 @@ export const AboutPage = ({ onOpenLeadModal }) => {
       <section className="bg-[#f5a623] py-6 text-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-center">
-            {projectHighlights.contacts.map((c, i) => (
+            {[
+              { name: 'Order Now', phone: '+91 88823 33651' },
+              { name: 'Sales Enquiry', phone: '9453531311' },
+              { name: 'Sales Enquiry', phone: '9555477002' },
+              { name: 'Sales Enquiry', phone: '8744809735' }
+            ].map((c, i) => (
               <div key={i} className="bg-slate-950 text-white p-3.5 rounded border border-slate-800">
                 <p className="text-xs text-[#f5a623] font-bold uppercase">{c.name}</p>
                 <a href={`tel:${c.phone.replace(/[^0-9+]/g, '')}`} className="text-sm font-black hover:text-[#f5a623] transition">

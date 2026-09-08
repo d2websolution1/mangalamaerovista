@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import { 
-  Phone, 
-  Mail, 
-  Clock, 
-  Menu, 
-  X, 
-  ChevronDown, 
+import {
+  Phone,
+  Mail,
+  Clock,
+  Menu,
+  X,
+  ChevronDown,
   ChevronRight
 } from 'lucide-react';
-
 export const Navbar = ({ onOpenLeadModal }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -19,9 +18,9 @@ export const Navbar = ({ onOpenLeadModal }) => {
       {/* ─── ROW 1: TOP BAR WITH ANGULAR CUTOUT & SOCIAL ICONS ─── */}
       <div className="relative bg-[#0c0d10] text-white text-xs select-none">
         <div className="w-full flex items-center justify-between">
-          
+
           {/* Left Yellow Angled Tab */}
-          <div 
+          <div
             className="relative bg-[#f5a623] text-black font-semibold text-xs py-2 px-5 sm:px-8 flex items-center gap-2 pr-10"
             style={{
               clipPath: 'polygon(0 0, 100% 0, calc(100% - 24px) 100%, 0% 100%)'
@@ -34,9 +33,9 @@ export const Navbar = ({ onOpenLeadModal }) => {
           {/* Right Social Links */}
           <div className="flex items-center gap-4 sm:gap-5 pr-4 sm:pr-8 py-2 text-slate-300">
             {/* Facebook */}
-            <a 
-              href="https://facebook.com" 
-              target="_blank" 
+            <a
+              href="https://www.facebook.com/profile.php?id=61593513610864"
+              target="_blank"
               rel="noreferrer"
               aria-label="Facebook"
               className="hover:text-[#f5a623] transition-colors"
@@ -47,9 +46,9 @@ export const Navbar = ({ onOpenLeadModal }) => {
             </a>
 
             {/* Twitter / X */}
-            <a 
-              href="https://twitter.com" 
-              target="_blank" 
+            <a
+              href="https://twitter.com"
+              target="_blank"
               rel="noreferrer"
               aria-label="Twitter"
               className="hover:text-[#f5a623] transition-colors"
@@ -60,9 +59,9 @@ export const Navbar = ({ onOpenLeadModal }) => {
             </a>
 
             {/* Instagram */}
-            <a 
-              href="https://instagram.com" 
-              target="_blank" 
+            <a
+              href="https://instagram.com"
+              target="_blank"
               rel="noreferrer"
               aria-label="Instagram"
               className="hover:text-[#f5a623] transition-colors"
@@ -73,9 +72,9 @@ export const Navbar = ({ onOpenLeadModal }) => {
             </a>
 
             {/* Pinterest */}
-            <a 
-              href="https://pinterest.com" 
-              target="_blank" 
+            <a
+              href="https://pinterest.com"
+              target="_blank"
               rel="noreferrer"
               aria-label="Pinterest"
               className="hover:text-[#f5a623] transition-colors"
@@ -92,15 +91,15 @@ export const Navbar = ({ onOpenLeadModal }) => {
       {/* ─── ROW 2: WHITE MIDDLE BRAND LOGO & TWO INFO BOXES ─── */}
       <div className="bg-white py-3.5 px-4 sm:px-8 border-b border-slate-100">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
-          
-          {/* Logo: MANGALAM AEROVISTA with Stylized 'M' */}
+
+          {/* Logo: MANGALAM AEROVISTA with Brand Image */}
           <Link to="/" className="flex items-center gap-3 text-decoration-none group">
-            {/* Orange / Gold Circular Icon with 'M' */}
-            <div className="w-11 h-11 rounded-full border-[3px] border-[#f5a623] flex items-center justify-center bg-white shadow-sm shrink-0 group-hover:scale-105 transition-transform">
-              <span className="text-[#f5a623] font-black text-2xl uppercase leading-none" style={{ fontFamily: 'Outfit, sans-serif' }}>
-                M
-              </span>
-            </div>
+            {/* Logo Image */}
+            <img
+              src="/favicon.png"
+              alt="Mangalam Aerovista Logo"
+              className="w-11 h-11 rounded-full object-cover shadow-sm shrink-0 group-hover:scale-105 transition-transform"
+            />
             <div className="flex flex-col">
               <span className="text-xl sm:text-2xl font-black tracking-wider text-black leading-none uppercase" style={{ fontFamily: 'Outfit, sans-serif' }}>
                 MANGALAM
@@ -113,7 +112,7 @@ export const Navbar = ({ onOpenLeadModal }) => {
 
           {/* Right Two Info Boxes */}
           <div className="hidden md:flex items-center gap-6 lg:gap-8">
-            
+
             {/* Box 1: Have Any Question */}
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 border border-[#f5a623] rounded-sm flex items-center justify-center text-[#f5a623] bg-amber-50/20 shrink-0">
@@ -123,11 +122,11 @@ export const Navbar = ({ onOpenLeadModal }) => {
                 <span className="text-xs font-bold text-slate-900 tracking-tight leading-tight">
                   Have Any Question
                 </span>
-                <a 
-                  href="tel:+918882784781" 
+                <a
+                  href="tel:+918882333651"
                   className="text-xs sm:text-sm font-semibold text-[#f5a623] hover:underline mt-0.5 tracking-tight"
                 >
-                  (+91) 888 278 4781
+                  (+91) 88823 33651
                 </a>
               </div>
             </div>
@@ -141,11 +140,11 @@ export const Navbar = ({ onOpenLeadModal }) => {
                 <span className="text-xs font-bold text-slate-900 tracking-tight leading-tight">
                   Send Your Mail
                 </span>
-                <a 
-                  href="mailto:info@mangalamaerovista.com" 
+                <a
+                  href="mailto:Vedreadymixconcrete@gmail.com"
                   className="text-xs sm:text-sm font-semibold text-[#f5a623] hover:underline mt-0.5 tracking-tight"
                 >
-                  info@mangalamaerovista.com
+                  Vedreadymixconcrete@gmail.com
                 </a>
               </div>
             </div>
@@ -169,16 +168,15 @@ export const Navbar = ({ onOpenLeadModal }) => {
       {/* ─── ROW 3: BLACK NAVIGATION BAR WITH 5 CLEAN REQUESTED PAGES ─── */}
       <div className="bg-[#0c0d10] text-white">
         <div className="max-w-7xl mx-auto flex items-stretch justify-between">
-          
+
           {/* Main Desktop Nav Items: home, about, project, gallery, contact us */}
           <nav className="hidden md:flex items-stretch text-sm font-medium tracking-normal">
-            
+
             {/* 1. Home */}
             <NavLink
               to="/"
-              className={({ isActive }) => 
-                `px-6 py-3.5 flex items-center transition-colors hover:text-[#f5a623] ${
-                  isActive ? 'text-[#f5a623] font-bold border-b-2 border-[#f5a623]' : 'text-slate-200'
+              className={({ isActive }) =>
+                `px-6 py-3.5 flex items-center transition-colors hover:text-[#f5a623] ${isActive ? 'text-[#f5a623] font-bold border-b-2 border-[#f5a623]' : 'text-slate-200'
                 }`
               }
             >
@@ -188,9 +186,8 @@ export const Navbar = ({ onOpenLeadModal }) => {
             {/* 2. About */}
             <NavLink
               to="/about"
-              className={({ isActive }) => 
-                `px-6 py-3.5 flex items-center transition-colors hover:text-[#f5a623] ${
-                  isActive ? 'text-[#f5a623] font-bold border-b-2 border-[#f5a623]' : 'text-slate-200'
+              className={({ isActive }) =>
+                `px-6 py-3.5 flex items-center transition-colors hover:text-[#f5a623] ${isActive ? 'text-[#f5a623] font-bold border-b-2 border-[#f5a623]' : 'text-slate-200'
                 }`
               }
             >
@@ -200,9 +197,8 @@ export const Navbar = ({ onOpenLeadModal }) => {
             {/* 3. Project / Projects */}
             <NavLink
               to="/projects"
-              className={({ isActive }) => 
-                `px-6 py-3.5 flex items-center transition-colors hover:text-[#f5a623] ${
-                  isActive ? 'text-[#f5a623] font-bold border-b-2 border-[#f5a623]' : 'text-slate-200'
+              className={({ isActive }) =>
+                `px-6 py-3.5 flex items-center transition-colors hover:text-[#f5a623] ${isActive ? 'text-[#f5a623] font-bold border-b-2 border-[#f5a623]' : 'text-slate-200'
                 }`
               }
             >
@@ -212,9 +208,8 @@ export const Navbar = ({ onOpenLeadModal }) => {
             {/* 4. Gallery */}
             <NavLink
               to="/gallery"
-              className={({ isActive }) => 
-                `px-6 py-3.5 flex items-center transition-colors hover:text-[#f5a623] ${
-                  isActive ? 'text-[#f5a623] font-bold border-b-2 border-[#f5a623]' : 'text-slate-200'
+              className={({ isActive }) =>
+                `px-6 py-3.5 flex items-center transition-colors hover:text-[#f5a623] ${isActive ? 'text-[#f5a623] font-bold border-b-2 border-[#f5a623]' : 'text-slate-200'
                 }`
               }
             >
@@ -224,9 +219,8 @@ export const Navbar = ({ onOpenLeadModal }) => {
             {/* 5. Contact Us */}
             <NavLink
               to="/contact"
-              className={({ isActive }) => 
-                `px-6 py-3.5 flex items-center transition-colors hover:text-[#f5a623] ${
-                  isActive ? 'text-[#f5a623] font-bold border-b-2 border-[#f5a623]' : 'text-slate-200'
+              className={({ isActive }) =>
+                `px-6 py-3.5 flex items-center transition-colors hover:text-[#f5a623] ${isActive ? 'text-[#f5a623] font-bold border-b-2 border-[#f5a623]' : 'text-slate-200'
                 }`
               }
             >
@@ -250,15 +244,15 @@ export const Navbar = ({ onOpenLeadModal }) => {
       {/* ─── MOBILE MENU ─── */}
       {mobileMenuOpen && (
         <div className="md:hidden bg-[#0c0d10] border-t border-slate-800 px-4 pt-3 pb-6 text-white space-y-3 animate-in slide-in-from-top duration-200">
-          
+
           <div className="grid grid-cols-1 gap-2 p-3 bg-slate-900 rounded-lg text-xs border border-slate-800">
-            <a href="tel:+918882784781" className="flex items-center gap-2 text-[#f5a623] font-bold">
+            <a href="tel:+918882333651" className="flex items-center gap-2 text-[#f5a623] font-bold">
               <Phone size={14} />
-              <span>(+91) 888 278 4781</span>
+              <span>(+91) 88823 33651</span>
             </a>
-            <a href="mailto:info@mangalamaerovista.com" className="flex items-center gap-2 text-slate-300">
+            <a href="mailto:Vedreadymixconcrete@gmail.com" className="flex items-center gap-2 text-slate-300">
               <Mail size={14} className="text-[#f5a623]" />
-              <span>info@mangalamaerovista.com</span>
+              <span>Vedreadymixconcrete@gmail.com</span>
             </a>
           </div>
 

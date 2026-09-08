@@ -56,7 +56,12 @@ export const ContactPage = () => {
       {/* ── Promoters Hotline Strip ── */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 relative z-30">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {projectHighlights.contacts.map((c, idx) => (
+          {[
+            { name: 'Order Now', phone: '+91 88823 33651' },
+            { name: 'Sales Enquiry', phone: '9453531311' },
+            { name: 'Sales Enquiry', phone: '9555477002' },
+            { name: 'Sales Enquiry', phone: '8744809735' }
+          ].map((c, idx) => (
             <div key={idx} className="bg-white p-5 rounded-xl border border-slate-200 shadow-xl flex items-center gap-3">
               <div className="w-10 h-10 rounded bg-amber-500/10 text-[#f5a623] flex items-center justify-center shrink-0">
                 <Phone size={18} />
@@ -244,7 +249,7 @@ export const ContactPage = () => {
 
               <div className="pt-2">
                 <a
-                  href="https://wa.me/919958613789?text=Hello%20Mangalam%20Aerovista%2C%20I%20want%20details%20about%20the%20Golden%20Rental%20Plan%20in%20Navagam."
+                  href="https://wa.me/918882333651?text=Hello%20Mangalam%20Aerovista%2C%20I%20want%20details%20about%20the%20Golden%20Rental%20Plan%20in%20Navagam."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full py-3.5 bg-emerald-500 hover:bg-emerald-600 text-white font-bold rounded text-xs transition flex items-center justify-center gap-2 shadow"
